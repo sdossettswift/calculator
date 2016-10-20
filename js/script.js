@@ -15,7 +15,6 @@ var plus = document.querySelector('#add')
 var times = document.querySelector('#multiply')
 var divide = document.querySelector('#divide')
 var clear = document.querySelector('#clear')
-
 var inputString = ''
 
 var displayInput = function(evt) {
@@ -27,6 +26,7 @@ var displayInput = function(evt) {
 
 var clearOutput = function() {
     output.innerHTML = ''
+    var inputString = ''
 }
 
 //adding event listeners
@@ -40,4 +40,9 @@ seven.addEventListener('click', displayInput)
 eight.addEventListener('click', displayInput)
 nine.addEventListener('click', displayInput)
 clear.addEventListener('click', clearOutput)
+equals.addEventListener('click', displayInput)
+minus.addEventListener('click', displayInput)
+plus.addEventListener('click', displayInput)
+times.addEventListener('click', displayInput)
+divide.addEventListener('click', displayInput)
 
