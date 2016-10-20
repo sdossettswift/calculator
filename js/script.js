@@ -1,5 +1,6 @@
 //getting document nodes
 var output = document.querySelector('.functionOutput')
+var zero = document.querySelector('#zero')
 var one = document.querySelector('#one')
 var two = document.querySelector('#two')
 var three = document.querySelector('#three')

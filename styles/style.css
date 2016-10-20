@@ -17,8 +17,30 @@
     border: 3px solid orange;
     background: white;
     font-size: 48px;
+    text-align: center;
 }
 
+.inputDiv {
+    display: inline-block;
+    /*border: 3px solid black;*/
+    height: 80px;
+}
+
+.inputDiv p {
+    font-size: 12px;
+}
+
+.inputs {
+    border: 3px solid blue;
+    font-size: 24px;
+}
+
+#firstInput {
+    width: 40%;
+}
+#secondInput {
+    width:40%;
+}
 /*Input Area*/
 
 .numCol {
