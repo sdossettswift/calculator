@@ -26,7 +26,7 @@ var displayInput = function(evt) {
 
 var clearOutput = function() {
     output.innerHTML = ''
-    var inputString = ''
+    inputString = ''
 }
 
 //adding event listeners
