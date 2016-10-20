@@ -43,6 +43,13 @@
     cursor: pointer;
 }
 
+#clear {
+    font-size: 48px;
+    border:3px solid red;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
 .functionCol {
     display: inline-block;
     width: 40%;
