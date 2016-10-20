@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.calculator {
+    border: 3px solid purple;
+    width: 35%;
+    margin: 0 auto;
+    background: lightgrey;
+}
+
+/*Output Area*/
+.functionOutput {
+    width: 100%;
+    height:100px;
+    border: 3px solid orange;
+    background: white;
+}
+
+/*Input Area*/
+
+.numCol {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.numRow {
+    text-align: center;
+    min-height: 30%;
+}
+
+.num {
+    display: inline-block;
+    font-size:48px;
+    width: 25%;
+    margin: 2%;
+    text-align: center;
+    border: 3px solid red;
+    border-radius: 15%;
+}
+
+.functionCol {
+    display: inline-block;
+    width: 40%;
+}
+
+.func {
+    text-align: center;
+    font-size: 48px;
+    border: 3px solid red;
+    width: 33%;
+    border-radius: 15%;
+    margin: 2% auto;
+}
