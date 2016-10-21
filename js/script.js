@@ -22,17 +22,19 @@ var clear = document.querySelector('#clear')
 var firstInputNode = document.querySelector('#firstInput .inputs')
 var operatorNode = document.querySelector('#operator .inputs')
 var secondInputNode = document.querySelector('#secondInput .inputs')
+var functionOutput = document.querySelector('.functionOutput')
 
 //other global variables
 var inputStringOne = ''
 var inputStringTwo = ''
+var originalHTML = functionOutput.innerHTML
 
 //this function will put the operator in the output box when you click on it
 var getOperator = function(evt) {
     var operatorInput = evt.target
     var operator = operatorInput.innerHTML
     operatorNode.innerHTML = operator
-    return operatorNode.innerHTML
+    // return operatorNode.innerHTML
 }
 
 //this function will clear the inputs for a new function
@@ -42,6 +44,7 @@ var clearInputs = function() {
     firstInputNode.innerHTML = ''
     operatorNode.innerHTML = ''
     secondInputNode.innerHTML = ''
+    functionOutput.innerHTML = originalHTML
 }
 
 //this function puts the inputs in the correct spot. if an operator does not exist it will go into the first node, if it does exist it will go into the second
@@ -52,11 +55,33 @@ var getInputs = function(evt) {
     if(!operatorNode.innerHTML) {
         inputStringOne += inputNum
         firstInputNode.innerHTML = inputStringOne
+
     }
     else {
         inputStringTwo += inputNum
         secondInputNode.innerHTML = inputStringTwo
+
     }
+}
+
+var performOperation = function() {
+    var firstInputNum = parseInt(firstInputNode.innerHTML)
+    var secondInputNum = parseInt(secondInputNode.innerHTML)
+    var operatorInput = operatorNode.innerHTML
+
+    if(operatorInput === '-') {
+        functionOutput.innerHTML = firstInputNum - secondInputNum
+    }
+    else if(operatorInput === '+') {
+        functionOutput.innerHTML = firstInputNum + secondInputNum
+    }
+    else if(operatorInput === '*') {
+        functionOutput.innerHTML = firstInputNum * secondInputNum
+    }
+    else {
+        functionOutput.innerHTML = firstInputNum / secondInputNum
+    }
+
 }
 
 
@@ -82,5 +107,5 @@ eight.addEventListener('click', getInputs)
 nine.addEventListener('click', getInputs)
 
 //perform operation
-// equals.addEventListener('click', performOperation)
+equals.addEventListener('click', performOperation)
 
