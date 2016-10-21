@@ -29,26 +29,10 @@ var inputStringOne = ''
 var inputStringTwo = ''
 var originalHTML = functionOutput.innerHTML
 
-//this function will put the operator in the output box when you click on it
-var getOperator = function(evt) {
-    var operatorInput = evt.target
-    var operator = operatorInput.innerHTML
-    operatorNode.innerHTML = operator
-    // return operatorNode.innerHTML
-}
-
-//this function will clear the inputs for a new function
-var clearInputs = function() {
-    inputStringOne = ''
-    inputStringTwo = ''
-    firstInputNode.innerHTML = ''
-    operatorNode.innerHTML = ''
-    secondInputNode.innerHTML = ''
-    functionOutput.innerHTML = originalHTML
-}
 
 //this function puts the inputs in the correct spot. if an operator does not exist it will go into the first node, if it does exist it will go into the second
 var getInputs = function(evt) {
+    console.log(evt)
     var inputNode = evt.target
     var inputNum = inputNode.innerHTML
 
@@ -60,9 +44,19 @@ var getInputs = function(evt) {
     else {
         inputStringTwo += inputNum
         secondInputNode.innerHTML = inputStringTwo
-
     }
+    console.log(firstInputNode)
+    console.log(secondInputNode.innerHTML)
 }
+
+//this function will put the operator in the output box when you click on it
+var getOperator = function(evt) {
+    var operatorInput = evt.target
+    var operator = operatorInput.innerHTML
+    console.log(operator)
+    operatorNode.innerHTML = operator
+}
+
 
 var performOperation = function() {
     var firstInputNum = parseInt(firstInputNode.innerHTML)
@@ -81,9 +75,23 @@ var performOperation = function() {
     else {
         functionOutput.innerHTML = firstInputNum / secondInputNum
     }
-
+    console.log(functionOutput.innerHTML)
 }
 
+//this function will clear the inputs for a new function
+var clearInputs = function() {
+    console.log('clearing')
+    functionOutput.innerHTML = originalHTML
+    inputStringOne = ''
+    inputStringTwo = ''
+    firstInputNode.innerHTML = ''
+    operatorNode.innerHTML = ''
+    secondInputNode.innerHTML = ''
+
+    console.log(functionOutput.innerHTML)
+    console.log(firstInputNode.innerHTML)
+    console.log(secondInputNode.innerHTML)
+}
 
 //operator event listeners
 minus.addEventListener('click', getOperator)

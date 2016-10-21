@@ -6,7 +6,7 @@
 
 .calculator {
     border: 3px solid purple;
-    width: 35%;
+    width: 50%;
     margin: 0 auto;
     background: lightgrey;
 }
@@ -17,7 +17,6 @@
     height:100px;
     border: 3px solid orange;
     background: white;
-    font-size: 48px;
     text-align: center;
 }
 
@@ -25,6 +24,7 @@
     display: inline-block;
     height: 80px;
     vertical-align: top;
+    padding: 0 2%;
 }
 
 .inputDiv p {
@@ -33,15 +33,24 @@
 
 .inputs {
     border: 3px solid blue;
-    font-size: 24px;
+    font-size: 16px;
     height: 48px;
 }
 
 #firstInput {
-    width: 40%;
+    width: 30%;
 }
+
 #secondInput {
-    width:40%;
+    width: 30%;
+}
+
+#operator: {
+    width: 15%;
+}
+
+#output {
+    width: 15%;
 }
 /*Input Area*/
 
