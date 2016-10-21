@@ -22,12 +22,11 @@ var clear = document.querySelector('#clear')
 var firstInputNode = document.querySelector('#firstInput .inputs')
 var operatorNode = document.querySelector('#operator .inputs')
 var secondInputNode = document.querySelector('#secondInput .inputs')
-var functionOutput = document.querySelector('.functionOutput')
+var outputNode = document.querySelector('.answer')
 
 //other global variables
 var inputStringOne = ''
 var inputStringTwo = ''
-var originalHTML = functionOutput.innerHTML
 
 
 //this function puts the inputs in the correct spot. if an operator does not exist it will go into the first node, if it does exist it will go into the second
@@ -64,33 +63,29 @@ var performOperation = function() {
     var operatorInput = operatorNode.innerHTML
 
     if(operatorInput === '-') {
-        functionOutput.innerHTML = firstInputNum - secondInputNum
+        outputNode.innerHTML = firstInputNum - secondInputNum
     }
     else if(operatorInput === '+') {
-        functionOutput.innerHTML = firstInputNum + secondInputNum
+        outputNode.innerHTML = firstInputNum + secondInputNum
     }
     else if(operatorInput === '*') {
-        functionOutput.innerHTML = firstInputNum * secondInputNum
+        outputNode.innerHTML = firstInputNum * secondInputNum
     }
     else {
-        functionOutput.innerHTML = firstInputNum / secondInputNum
+        outputNode.innerHTML = firstInputNum / secondInputNum
     }
-    console.log(functionOutput.innerHTML)
+    console.log(outputNode.innerHTML)
 }
 
 //this function will clear the inputs for a new function
 var clearInputs = function() {
     console.log('clearing')
-    functionOutput.innerHTML = originalHTML
+    outputNode.innerHTML = ''
     inputStringOne = ''
     inputStringTwo = ''
     firstInputNode.innerHTML = ''
     operatorNode.innerHTML = ''
     secondInputNode.innerHTML = ''
-
-    console.log(functionOutput.innerHTML)
-    console.log(firstInputNode.innerHTML)
-    console.log(secondInputNode.innerHTML)
 }
 
 //operator event listeners
