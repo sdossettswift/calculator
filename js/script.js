@@ -29,15 +29,10 @@ var inputStringTwo = ''
 
 //this function will put the operator in the output box when you click on it
 var getOperator = function(evt) {
-    if(evt) {
-        var operatorInput = evt.target
-        var operator = operatorInput.innerHTML
-        operatorNode.innerHTML = operator
-        return operatorNode.innerHTML
-    }
-    else {
-        return undefined
-    }
+    var operatorInput = evt.target
+    var operator = operatorInput.innerHTML
+    operatorNode.innerHTML = operator
+    return operatorNode.innerHTML
 }
 
 //this function will clear the inputs for a new function
@@ -49,6 +44,7 @@ var clearInputs = function() {
     secondInputNode.innerHTML = ''
 }
 
+//this function puts the inputs in the correct spot. if an operator does not exist it will go into the first node, if it does exist it will go into the second
 var getInputs = function(evt) {
     var inputNode = evt.target
     var inputNum = inputNode.innerHTML
@@ -84,4 +80,7 @@ six.addEventListener('click', getInputs)
 seven.addEventListener('click', getInputs)
 eight.addEventListener('click', getInputs)
 nine.addEventListener('click', getInputs)
+
+//perform operation
+// equals.addEventListener('click', performOperation)
 
